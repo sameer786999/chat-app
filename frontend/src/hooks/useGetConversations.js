@@ -10,6 +10,7 @@ const useGetConversations = () => {
       setLoading(true);
       try {
         const res = await fetch("/api/users");
+        
         console.log(res);
         const data = await res.json();
         if (data.error) {
@@ -23,8 +24,6 @@ const useGetConversations = () => {
       }
     };
 
-
-    
     getConversations();
   }, []);
 
